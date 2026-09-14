@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vamshi Vuppala | Chartered Accountant</title>
+<style>
+:root{
+  --bg:#07111f; --panel:#0d1b2d; --panel2:#10233a; --text:#edf4ff;
+  --muted:#9db0c9; --accent:#ef3340; --accent2:#ffb3ba; --line:#203650;
+  --white:#fff; --shadow:0 20px 60px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(circle at 85% 5%,#173657 0,transparent 28%),var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(7,17,31,.78);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}
+.navin{max-width:1180px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:14px 22px}
+.logo{font-weight:800;letter-spacing:.08em}.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:22px;font-size:14px;color:var(--muted)}
+.navlinks a:hover{color:#fff}
+.hero{min-height:100vh;display:grid;place-items:center;padding:120px 22px 70px}
+.hero-inner{max-width:1180px;width:100%;display:grid;grid-template-columns:1.3fr .7fr;gap:55px;align-items:center}
+.kicker{color:#ff8f99;text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:800}
+h1{font-size:clamp(48px,8vw,88px);line-height:.98;margin:15px 0 22px;letter-spacing:-.055em}
+h1 em{font-style:normal;color:#ff6b75}
+.hero p{max-width:720px;color:var(--muted);font-size:18px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:12px 18px;border-radius:10px;border:1px solid var(--line);font-weight:700;font-size:14px}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn:hover{transform:translateY(-2px)}
+.profile-card{background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:var(--shadow)}
+.initials{height:120px;width:120px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),#7f1520);font-size:38px;font-weight:900;margin-bottom:24px}
+.profile-card h2{margin:0 0 4px}.profile-card .role{color:#ff9da5;font-weight:700}
+.contact{margin-top:22px;display:grid;gap:10px;color:var(--muted);font-size:14px}
+section{max-width:1180px;margin:auto;padding:90px 22px}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:34px}
+.eyebrow{color:#ff7d86;font-size:12px;text-transform:uppercase;letter-spacing:.16em;font-weight:800}
+h2{font-size:40px;letter-spacing:-.035em;margin:8px 0 0}.section-head p{max-width:520px;color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:rgba(13,27,45,.78);border:1px solid var(--line);border-radius:18px;padding:22px;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:#3b5877}
+.card h3{margin:0 0 8px}.card p{color:var(--muted);font-size:14px}
+.stat{font-size:34px;font-weight:900}.stat small{display:block;color:var(--muted);font-size:12px;font-weight:600}
+.timeline{position:relative;margin-top:25px}.timeline:before{content:"";position:absolute;left:17px;top:0;bottom:0;width:2px;background:var(--line)}
+.item{position:relative;padding-left:58px;margin:0 0 26px}
+.dot{position:absolute;left:9px;top:9px;width:18px;height:18px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px rgba(239,51,64,.12)}
+.item-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px}
+.item-card .date{font-size:12px;color:#ff8f99;font-weight:800;text-transform:uppercase;letter-spacing:.1em}
+.item-card h3{font-size:23px;margin:5px 0}.item-card h4{margin:0;color:var(--muted);font-weight:600}
+ul{padding-left:20px}.item-card li{margin:8px 0;color:#c5d2e3}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.tag{border:1px solid #2c4662;border-radius:999px;padding:5px 10px;font-size:12px;color:#b9cbe0}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}.tab{cursor:pointer;border:1px solid var(--line);background:transparent;color:var(--muted);padding:9px 13px;border-radius:9px}.tab.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.tabcontent{display:none}.tabcontent.active{display:block}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.skill{margin-bottom:18px}.skilltop{display:flex;justify-content:space-between;font-size:14px;margin-bottom:7px}.bar{height:8px;background:#152a42;border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;width:var(--w);background:linear-gradient(90deg,var(--accent),#ff7881);border-radius:99px}
+.edu{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:0;border:1px solid var(--line);border-radius:15px;overflow:hidden}.edu div{padding:15px;border-bottom:1px solid var(--line);background:var(--panel)}.edu .head{font-weight:800;color:#fff;background:var(--panel2)}
+.quote{font-size:25px;line-height:1.4;border-left:3px solid var(--accent);padding-left:22px;color:#dbe7f7}
+footer{border-top:1px solid var(--line);padding:30px 22px;color:var(--muted);text-align:center}
+.reveal{opacity:0;transform:translateY(18px);transition:.65s}.reveal.show{opacity:1;transform:none}
+@media(max-width:850px){.hero-inner{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.skills{grid-template-columns:1fr}.navlinks{display:none}}
+@media(max-width:560px){.cards{grid-template-columns:1fr}.edu{grid-template-columns:1fr 1fr;font-size:13px}h2{font-size:32px}.hero{padding-top:95px}.profile-card{padding:20px}}
+</style>
+</head>
+<body>
+<nav><div class="navin"><a class="logo" href="#top">V<span>V</span></a><div class="navlinks"><a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a></div></div></nav>
+
+<header class="hero" id="top">
+<div class="hero-inner">
+<div class="reveal">
+<div class="kicker">Chartered Accountant • Finance • Global Treasury</div>
+<h1>Vamshi<br><em>Vuppala.</em></h1>
+<p>Chartered Accountant working as a <strong>Manager in HSBC Finance</strong>, focused on liquidity and regulatory reporting, financial analysis, controls and global stakeholder management.</p>
+<div class="ctas"><a class="btn primary" href="#experience">Explore my journey ↓</a><a class="btn" href="mailto:vamshiv46@gmail.com">Get in touch</a></div>
+</div>
+<div class="profile-card reveal">
+<div class="initials">VV</div>
+<h2>Vamshi Vuppala</h2><div class="role">Chartered Accountant</div>
+<div class="contact">
+<div>📍 Hyderabad, India</div><div>✉️ vamshiv46@gmail.com</div><div>☎️ +91 9652889721</div><div>🔗 linkedin.com/in/vamshivuppala</div>
+</div>
+</div>
+</div>
+</header>
+
+<section id="about">
+<div class="section-head reveal"><div><div class="eyebrow">At a glance</div><h2>Finance, controls & analysis.</h2></div><p>A career combining professional accounting, audit, regulatory reporting and banking finance.</p></div>
+<div class="cards">
+<div class="card reveal"><div class="stat">CA</div><small>Qualified Chartered Accountant</small><p>Cleared all levels of CA in the first attempt, with exemptions across CA Inter and Final.</p></div>
+<div class="card reveal"><div class="stat">3+</div><small>Years in audit & advisory</small><p>Statutory audit, internal audit, ASM, virtual CFO, tax and other assignments.</p></div>
+<div class="card reveal"><div class="stat">Global</div><small>Banking & treasury exposure</small><p>HSBC Finance role involving liquidity reporting, regulatory submissions and global stakeholders.</p></div>
+</div>
+</section>
+
+<section id="experience">
+<div class="section-head reveal"><div><div class="eyebrow">Career</div><h2>Experience that compounds.</h2></div><p>Two complementary chapters: broad audit exposure followed by specialised global banking finance.</p></div>
+<div class="timeline">
+<div class="item reveal"><span class="dot"></span><div class="item-card">
+<div class="date">Current role • HSBC</div><h3>Manager — HBAP Reporting Operations</h3><h4>Finance • Liquidity & Regulatory Reporting</h4>
+<ul>
+<li>Produce and support liquidity reporting including Internal Liquidity Metric, PRA 110, LCR, NSFR, AMM, ALCO packs, Depositors Concentration and Term Funding reports.</li>
+<li>Manage/support regulatory submissions to PRA within defined deadlines and provide analysis/MI for senior management and regulators.</li>
+<li>Apply reconciliation and validation controls to maintain consistency and data integrity across submissions.</li>
+<li>Work with regional, site and group ALCM teams and global liquidity reporting stakeholders across geographies.</li>
+<li>Analyse business performance, resolve variances and provide meaningful commentary to facilitate decision-making.</li>
+<li>Support process documentation, best-practice guidance, TOM transitions, SOPs, BCP and continuous improvement.</li>
+</ul>
+<div class="tags"><span class="tag">Liquidity Reporting</span><span class="tag">LCR</span><span class="tag">NSFR</span><span class="tag">PRA 110</span><span class="tag">Basel III</span><span class="tag">ALCO</span><span class="tag">Controls</span><span class="tag">MI</span></div>
+</div></div>
+
+<div class="item reveal"><span class="dot"></span><div class="item-card">
+<div class="date">Feb 2021 — Feb 2024</div><h3>Article Assistant</h3><h4>Raju & Prasad Chartered Accountants, Hyderabad</h4>
+<ul>
+<li>Spearheaded a team of 4 for planning, execution and reporting of audits, including work allocation and review.</li>
+<li>Worked across statutory and internal audits covering power, defence, manufacturing, IT services and other sectors.</li>
+<li>Performed ledger scrutiny, variance and ageing analysis, confirmations, BRS/cash verification, physical verification and financial statement review.</li>
+<li>Evaluated internal financial controls and drafted audit reports under CARO 2020.</li>
+<li>Performed ASM work involving drawing power, stock statements, inventory valuation, bank statements, LC/BG review and end-use of funds.</li>
+<li>Provided virtual CFO, accounting, payroll, GST, income tax, MCA, PF and ESI support.</li>
+</ul>
+<div class="tags"><span class="tag">Statutory Audit</span><span class="tag">Internal Audit</span><span class="tag">ASM</span><span class="tag">IFC</span><span class="tag">GST</span><span class="tag">Tax</span><span class="tag">Forensic Audit</span></div>
+</div></div>
+</div>
+</section>
+
+<section id="skills">
+<div class="section-head reveal"><div><div class="eyebrow">Capabilities</div><h2>What I work with.</h2></div><p>Core capabilities reflected across the resume and HSBC role profile.</p></div>
+<div class="tabs reveal">
+<button class="tab active" onclick="showTab('finance',this)">Finance & Treasury</button>
+<button class="tab" onclick="showTab('audit',this)">Audit & Controls</button>
+<button class="tab" onclick="showTab('tools',this)">Tools & Systems</button>
+</div>
+<div id="finance" class="tabcontent active"><div class="skills">
+<div><div class="skill"><div class="skilltop"><span>Liquidity Reporting</span><b>Expertise</b></div><div class="bar"><i style="--w:92%"></i></div></div><div class="skill"><div class="skilltop"><span>Regulatory Reporting</span><b>Expertise</b></div><div class="bar"><i style="--w:90%"></i></div></div><div class="skill"><div class="skilltop"><span>Financial Analysis</span><b>Strong</b></div><div class="bar"><i style="--w:86%"></i></div></div></div>
+<div><div class="skill"><div class="skilltop"><span>Balance Sheet / Banking Finance</span><b>Strong</b></div><div class="bar"><i style="--w:86%"></i></div></div><div class="skill"><div class="skilltop"><span>Basel III / Liquidity Metrics</span><b>Strong</b></div><div class="bar"><i style="--w:84%"></i></div></div><div class="skill"><div class="skilltop"><span>Stakeholder Management</span><b>Strong</b></div><div class="bar"><i style="--w:88%"></i></div></div></div>
+</div></div>
+<div id="audit" class="tabcontent"><div class="cards"><div class="card"><h3>Statutory Audit</h3><p>Standards on Auditing, GAAP/AS compliance, financial statements, CARO 2020 and IFC documentation.</p></div><div class="card"><h3>Internal Audit</h3><p>Control deficiencies, revenue leakages, SOP compliance and review of revenue, expenditure, inventory and material management.</p></div><div class="card"><h3>Credit / ASM</h3><p>Drawing power, stock statements, inventory valuation, cash-flow analysis, LC/BG review and end-use of funds.</p></div></div></div>
+<div id="tools" class="tabcontent"><div class="cards"><div class="card"><h3>SAP</h3><p>Working knowledge.</p></div><div class="card"><h3>Oracle NetSuite</h3><p>Working knowledge.</p></div><div class="card"><h3>MS Office</h3><p>Worked on Microsoft Office tools, including Excel and PowerPoint requirements in the finance role.</p></div><div class="card"><h3>Tally • Zoho Books</h3><p>Accounting systems exposure.</p></div><div class="card"><h3>Genius • GreytHR</h3><p>Professional systems exposure.</p></div><div class="card"><h3>SQL</h3><p>Basic knowledge listed as a desirable skill in the HSBC role profile.</p></div></div></div>
+</section>
+
+<section id="education">
+<div class="section-head reveal"><div><div class="eyebrow">Education</div><h2>Academic milestones.</h2></div><p>Strong academic performance alongside professional qualification.</p></div>
+<div class="edu reveal">
+<div class="head">Course</div><div class="head">Year</div><div class="head">Score</div><div class="head">Achievement</div>
+<div><b>CA Final</b><br>ICAI</div><div>Nov 2024</div><div>388/600<br>64.67%</div><div>Exemption in 5/6 papers</div>
+<div><b>CA Inter</b><br>ICAI</div><div>Nov 2020</div><div>568/800<br>71.00%</div><div>Exemption in 7/8 papers</div>
+<div><b>CA CPT</b><br>ICAI</div><div>Jun 2019</div><div>182/200<br>81.00%</div><div>Cleared with distinction</div>
+<div><b>B.Com</b><br>Osmania University</div><div>2019–2022</div><div>9.17 CGPA<br>91.70%</div><div>—</div>
+<div><b>Intermediate</b><br>Telangana Board</div><div>2017–2019</div><div>987/1000<br>98.70%</div><div>State 1st Rank</div>
+<div><b>SSC</b><br>Telangana Board</div><div>2016–2017</div><div>9.70 GPA<br>97.00%</div><div>—</div>
+</div>
+<div class="quote reveal" style="margin-top:30px">“Cleared all levels of CA in first attempt.”</div>
+</section>
+
+<section id="contact">
+<div class="profile-card reveal" style="display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center">
+<div><div class="eyebrow">Let's connect</div><h2 style="margin-top:7px">Finance, reporting or a good conversation?</h2><p style="color:var(--muted)">I’m always open to meaningful professional conversations and opportunities.</p></div>
+<div class="ctas"><a class="btn primary" href="mailto:vamshiv46@gmail.com">Email me</a><a class="btn" href="https://www.linkedin.com/in/vamshivuppala" target="_blank">LinkedIn ↗</a></div>
+</div>
+</section>
+<footer>© 2026 Vamshi Vuppala • Chartered Accountant</footer>
+
+<script>
+function showTab(id,btn){
+ document.querySelectorAll('.tabcontent').forEach(x=>x.classList.remove('active'));
+ document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+ document.getElementById(id).classList.add('active'); btn.classList.add('active');
+}
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(e=>obs.observe(e));
+</script>
+</body>
+</html>
